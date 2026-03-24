@@ -1,20 +1,20 @@
-import { useState } from 'react'
+
 import gustavo from './assets/gustavo.png'
 import eta from './assets/eta.png'
 import Button from '../src/Components/Button.jsx'
+import { useEffect, useState } from "react";
 
 
 function App(e) {
-  const [nome, setNome] = useState("")
-  const [mostrarInput, setMostrarInput] = useState(true)
+  const [Balanca, SetBalanca] = useState(false);
   return (
     <div className="w-screen bg-black">
       <div className="box-border border-5  w-screen h-screen bg-cover text-center" style={{ backgroundImage: `url(${eta})` }}>
-        <div className="w-100% flex flex-col rounded-4xl items-center gap-10 mt-10 text-5xl font-semibold">Gustavo Lima Martins
+        <div className="w-100% flex flex-col rounded-4xl items-center gap-10 mt-10 text-5xl font-semibold"><span className = {`${Balanca ? "opacity-0 transition-all duration-700" : ""}`} style={{fontFamily: 'Playfair Display'}}>Gustavo Lima Martins</span>
           <div className="w-screen h-60">
-            <img src={gustavo} alt="gustavo" className="mx-auto w-80 rounded-full border-double border-10 bg-gray-700 hover:border-gray-300 hover:-my-5 hover:w-95 hover:cursor-pointer transition-all duration-800" />
+            <img src={gustavo} alt="gustavo" className = {`mx-auto w-80 rounded-full border-double border-10 bg-gray-700 hover:border-gray-300 hover:-my-5 hover:w-95 hover:cursor-pointer ${Balanca ? "animate-bounce shadow-purple-500" : ""} hover:shadow-purple-500 shadow-2xl transition-all duration-700`} onClick = {() => SetBalanca(!Balanca)}/>
           </div>
-          <h1 className="text-6xl h-20 w-80 text-center">Meus Links</h1>
+          <h1 className={`text-6xl h-20 w-80 ${Balanca ? "opacity-0 transition-all duration-700" : ""} text-center`} style={{fontFamily: 'Playfair Display'}}>Meus Links</h1>
           <div className="gap-10 flex h-25">
             <div className = "w-80 -my-10">
             {/* Botão Linkedin */}
