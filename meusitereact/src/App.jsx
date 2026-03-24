@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div
-      className="min-h-screen w-full bg-contain bg-center text-center px-4"
+      className="min-h-screen border-2 w-full bg-cover bg-center text-center px-4"
       style={{ backgroundImage: `url(${eta})` }}
     >
       <div className="flex flex-col items-center gap-10 mt-10 text-4xl md:text-5xl font-semibold">
