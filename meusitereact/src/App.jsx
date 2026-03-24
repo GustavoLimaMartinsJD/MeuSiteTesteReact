@@ -9,12 +9,12 @@ function App(e) {
   const [mostrarInput, setMostrarInput] = useState(true)
   return (
     <div className="w-screen bg-black">
-    <div className="box-border border-20 w-sreen h-screen bg-cover" style={{backgroundImage: `url(${eta})`}}>
-        <div className="w-100% flex flex-col items-center gap-10 mt-10 text-5xl font-semibold">Gustavo Lima Martins
+    <div className="box-border border-5  w-screen h-screen bg-cover text-center" style={{backgroundImage: `url(${eta})`}}>
+        <div className="w-100% flex flex-col rounded-4xl items-center gap-10 mt-10 text-5xl font-semibold">Gustavo Lima Martins
           <div className="w-screen h-60">
-            <img src={gustavo} alt="gustavo" className="mx-auto w-80 rounded-full border-10 hover:w-90 hover:h- transition-all duration-800 hover:cursor-pointer" />
+            <img src={gustavo} alt="gustavo" className="mx-auto w-80 rounded-full border-double border-10 bg-gray-700 hover:border-gray-300 hover:-my-5 hover:w-95 transition-all duration-800" />
           </div>
-          <h1 className="text-6xl font-extralight h-20 w-80 text-center">Meus Links</h1>
+          <h1 className="text-6xl h-20 w-80 text-center">Meus Links</h1>
           <div className="gap-10 flex h-25">
             {/* Botão Linkedin */}
             <Button corpadrao={"bg-blue-500"} texto={"Linkedin"} cor={"hover:bg-blue-400"} link={"https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/"}></Button>
