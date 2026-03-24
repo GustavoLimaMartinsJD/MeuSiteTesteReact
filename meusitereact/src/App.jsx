@@ -56,7 +56,7 @@ function App() {
           {/* MOBILE */}
           <div className="flex flex-col gap-6 md:hidden items-center">
             <div className="w-72">
-              <Button corpadrao="bg-amber-500" texto="Linkedin" cor="hover:bg-blue-400" link="https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/" />
+              <Button corpadrao="bg-blue-400" texto="Linkedin" cor="hover:bg-blue-400" link="https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/" />
             </div>
             <div className="w-72">
               <Button corpadrao="bg-amber-500" texto="Curriculo" cor="hover:bg-amber-500" link="https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view" />
@@ -65,7 +65,7 @@ function App() {
               <Button corpadrao="bg-orange-600" texto="Portifólio" cor="hover:bg-orange-600" link="https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view" />
             </div>
             <div className="w-72">
-              <Button corpadrao="bg-gray-400" texto="Git-Hub" cor="hover:bg-gray-400" link="https://github.com/GustavoLimaMartinsJD" />
+              <Button corpadrao="bg-white" texto="Git-Hub" cor="hover:bg-gray-400" link="https://github.com/GustavoLimaMartinsJD" />
             </div>
             <div className="w-72">
               <Button corpadrao="bg-green-700" texto="Game" cor="hover:bg-green-700" link="https://drive.google.com/drive/folders/1EFxVbd8FaIV30_cgdAxBufEmUV9H_6lM" />
@@ -88,7 +88,7 @@ function App() {
             </div>
 
             <div className="w-80 mt-20">
-              <Button corpadrao="bg-gray-700" texto="Git-Hub" cor="hover:bg-gray-400" link="https://github.com/GustavoLimaMartinsJD" />
+              <Button corpadrao="bg-gray-700" texto="Git-Hub" cor="hover:bg-white" link="https://github.com/GustavoLimaMartinsJD" />
             </div>
 
             <div className="w-80 -my-15">
