@@ -16,21 +16,25 @@ function App(e) {
           </div>
           <h1 className={`text-6xl h-20 w-80 ${Balanca ? "opacity-0 transition-all duration-700" : ""} text-center`} style={{fontFamily: 'Playfair Display'}}>Meus Links</h1>
           <div className="gap-10 flex h-25">
-            <div className = "w-80 -my-10">
+            <div className = "w-80 -my-15">
             {/* Botão Linkedin */}
             <Button corpadrao={"bg-blue-500"} texto={"Linkedin"} cor={"hover:bg-blue-400"} link={"https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/"}></Button>
             </div>
-            <div className = "w-80 mt-30">
+            <div className = "w-80 mt-20">
             {/* Botão Curriculo */}
             <Button corpadrao={"bg-red-500"} texto={"Curriculo"} cor={"hover:bg-amber-500"} link={"https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view?usp=sharing"}></Button>
             </div>
-            <div className = "w-80 mt-30">
+            <div className = "w-80 mt-35">
             {/*Botão Portifólio*/}
             <Button corpadrao={"bg-red-500"} texto={"Portifólio"} cor={"hover:bg-orange-600"} link={"https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view?usp=sharing"}></Button>
             </div>
-            <div className = "w-80 -my-10">
+            <div className = "w-80 mt-20">
             {/* Botão Git-Hub */}
             <Button corpadrao={"bg-gray-500"} texto={"Git-Hub"} cor={"hover:bg-gray-400"} link={"https://github.com/GustavoLimaMartinsJD"}></Button>
+            </div>
+            <div className = "w-80 -my-15">
+            {/* Botão-Game */}
+            <Button corpadrao={"bg-gray-500"} texto={"Game"} cor={"hover:bg-green-700"} link={"https://drive.google.com/drive/folders/1EFxVbd8FaIV30_cgdAxBufEmUV9H_6lM?usp=sharing"}></Button>
             </div>
           </div>
         </div>
