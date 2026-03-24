@@ -1,44 +1,107 @@
-
 import gustavo from './assets/gustavo.png'
 import eta from './assets/eta.png'
 import Button from '../src/Components/Button.jsx'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-
-function App(e) {
+function App() {
   const [Balanca, SetBalanca] = useState(false);
+
   return (
-    <div className="border-2 w-screen h-screen bg-cover text-center" style={{ backgroundImage: `url(${eta})` }}>
-      <div className="w-screen flex flex-col rounded-4xl items-center gap-10 mt-10 text-5xl font-semibold"><span className = {`${Balanca ? "opacity-0 transition-all duration-700" : ""}`} style={{fontFamily: 'Playfair Display'}}>Gustavo Lima Martins</span>
-        <div className="w-screen h-60">
-          <img src={gustavo} alt="gustavo" className = {`mx-auto w-80 rounded-full border-double border-10 bg-gray-700 hover:border-gray-300 hover:-my-5 hover:w-95 hover:cursor-pointer ${Balanca ? "animate-bounce shadow-purple-500" : ""} hover:shadow-purple-500 shadow-2xl transition-all duration-700`} onClick = {() => SetBalanca(!Balanca)}/>
+    <div
+      className="min-h-screen w-full bg-contain bg-center text-center px-4"
+      style={{ backgroundImage: `url(${eta})` }}
+    >
+      <div className="flex flex-col items-center gap-10 mt-10 text-4xl md:text-5xl font-semibold">
+
+        {/* Nome */}
+        <span
+          className={`${Balanca ? "opacity-0" : ""} transition-all duration-700`}
+          style={{ fontFamily: 'Playfair Display' }}
+        >
+          Gustavo Lima Martins
+        </span>
+
+        {/* Imagem */}
+        <div>
+          <img
+            src={gustavo}
+            alt="gustavo"
+            onClick={() => SetBalanca(!Balanca)}
+            className={`
+              mx-auto
+              w-52 md:w-72 lg:w-80
+              rounded-full border-double border-[10px] bg-gray-700
+              hover:border-gray-300
+              hover:-translate-y-2
+              hover:scale-105
+              hover:cursor-pointer
+              ${Balanca ? "animate-bounce shadow-purple-500" : ""}
+              shadow-2xl
+              transition-all duration-700
+            `}
+          />
         </div>
-        <h1 className={`text-6xl h-20 w-80 ${Balanca ? "opacity-0 transition-all duration-700" : ""} text-center`} style={{fontFamily: 'Playfair Display'}}>Meus Links</h1>
-        <div className="gap-10 flex h-25 w-100%">
-          <div className = "w-80 -my-15">
-          {/* Botão Linkedin */}
-          <Button corpadrao={"bg-blue-500"} texto={"Linkedin"} cor={"hover:bg-blue-400"} link={"https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/"}></Button>
+
+        {/* Título */}
+        <h1
+          className={`${Balanca ? "opacity-0" : ""} transition-all duration-700 text-4xl md:text-6xl`}
+          style={{ fontFamily: 'Playfair Display' }}
+        >
+          Meus Links
+        </h1>
+
+        {/* BOTÕES */}
+        <div className="w-full max-w-6xl">
+
+          {/* MOBILE */}
+          <div className="flex flex-col gap-6 md:hidden items-center">
+            <div className="w-72">
+              <Button corpadrao="bg-blue-500" texto="Linkedin" cor="hover:bg-blue-400" link="https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/" />
+            </div>
+            <div className="w-72">
+              <Button corpadrao="bg-red-500" texto="Curriculo" cor="hover:bg-amber-500" link="https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view" />
+            </div>
+            <div className="w-72">
+              <Button corpadrao="bg-red-500" texto="Portifólio" cor="hover:bg-orange-600" link="https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view" />
+            </div>
+            <div className="w-72">
+              <Button corpadrao="bg-gray-500" texto="Git-Hub" cor="hover:bg-gray-400" link="https://github.com/GustavoLimaMartinsJD" />
+            </div>
+            <div className="w-72">
+              <Button corpadrao="bg-gray-500" texto="Game" cor="hover:bg-green-700" link="https://drive.google.com/drive/folders/1EFxVbd8FaIV30_cgdAxBufEmUV9H_6lM" />
+            </div>
           </div>
-          <div className = "w-80 mt-20">
-          {/* Botão Curriculo */}
-          <Button corpadrao={"bg-red-500"} texto={"Curriculo"} cor={"hover:bg-amber-500"} link={"https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view?usp=sharing"}></Button>
+
+          {/* DESKTOP (igual ao seu) */}
+          <div className="hidden md:flex justify-center gap-10">
+
+            <div className="w-80 -my-15">
+              <Button corpadrao="bg-blue-500" texto="Linkedin" cor="hover:bg-blue-400" link="https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/" />
+            </div>
+
+            <div className="w-80 mt-20">
+              <Button corpadrao="bg-red-500" texto="Curriculo" cor="hover:bg-amber-500" link="https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view" />
+            </div>
+
+            <div className="w-80 mt-35">
+              <Button corpadrao="bg-red-500" texto="Portifólio" cor="hover:bg-orange-600" link="https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view" />
+            </div>
+
+            <div className="w-80 mt-20">
+              <Button corpadrao="bg-gray-500" texto="Git-Hub" cor="hover:bg-gray-400" link="https://github.com/GustavoLimaMartinsJD" />
+            </div>
+
+            <div className="w-80 -my-15">
+              <Button corpadrao="bg-gray-500" texto="Game" cor="hover:bg-green-700" link="https://drive.google.com/drive/folders/1EFxVbd8FaIV30_cgdAxBufEmUV9H_6lM" />
+            </div>
+
           </div>
-          <div className = "w-80 mt-35">
-          {/*Botão Portifólio*/}
-          <Button corpadrao={"bg-red-500"} texto={"Portifólio"} cor={"hover:bg-orange-600"} link={"https://drive.google.com/file/d/1qBs8OdpEF7_RdtKJ3L-edfoHXwvKHK6W/view?usp=sharing"}></Button>
-          </div>
-          <div className = "w-80 mt-20">
-          {/* Botão Git-Hub */}
-          <Button corpadrao={"bg-gray-500"} texto={"Git-Hub"} cor={"hover:bg-gray-400"} link={"https://github.com/GustavoLimaMartinsJD"}></Button>
-          </div>
-          <div className = "w-80 -my-15">
-          {/* Botão-Game */}
-          <Button corpadrao={"bg-gray-500"} texto={"Game"} cor={"hover:bg-green-700"} link={"https://drive.google.com/drive/folders/1EFxVbd8FaIV30_cgdAxBufEmUV9H_6lM?usp=sharing"}></Button>
-          </div>
+
         </div>
+
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
