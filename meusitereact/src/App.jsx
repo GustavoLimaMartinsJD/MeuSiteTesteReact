@@ -75,7 +75,7 @@ function App() {
           {/* DESKTOP (igual ao seu) */}
           <div className="hidden md:flex justify-center gap-10">
 
-            <div className="w-80 -my-15">
+            <div className="w-80 -my-4">
               <Button corpadrao="bg-gray-700" texto="Linkedin" cor="hover:bg-blue-400" link="https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/" />
             </div>
 
@@ -91,7 +91,7 @@ function App() {
               <Button corpadrao="bg-gray-700" texto="Git-Hub" cor="hover:bg-gray-500" link="https://github.com/GustavoLimaMartinsJD" />
             </div>
 
-            <div className="w-80 -my-15">
+            <div className="w-80 -my-4">
               <Button corpadrao="bg-gray-700" texto="Game" cor="hover:bg-green-700" link="https://drive.google.com/drive/folders/1EFxVbd8FaIV30_cgdAxBufEmUV9H_6lM" />
             </div>
 
