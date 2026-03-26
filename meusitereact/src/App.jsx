@@ -54,7 +54,7 @@ function App() {
         <div className="w-full max-w-6xl">
 
           {/* MOBILE */}
-          <div className="flex flex-col gap-6 md:hidden items-center">
+          <div className="flex flex-col gap-10 md:hidden items-center">
             <div className="w-72">
               <Button corpadrao="bg-blue-400" texto="Linkedin" cor="hover:bg-blue-400" link="https://www.linkedin.com/in/gustavo-lima-martins-9554143ab/" />
             </div>
